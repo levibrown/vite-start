@@ -1,13 +1,9 @@
 module.exports = {
-  moduleFileExtensions: [
-    'js',
-    'ts',
-    'json',
-    'vue'
-  ],
+  moduleFileExtensions: ["js", "ts", "json", "vue"],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.vue$': '@vue/vue3-jest'
+    "^.+\\.ts$": "ts-jest",
+    "^.+\\.vue$": "@vue/vue3-jest",
   },
-  testEnvironment: "jsdom"
-}
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>src/components/tests/setupTests.ts"],
+};
